@@ -1,5 +1,5 @@
 // Exercise #6
-let getJohnProfile = () => {
+let getJohnProfile = async () => {
   return new Promise(function (resolve) {
     setTimeout(
       () =>
@@ -13,7 +13,7 @@ let getJohnProfile = () => {
   });
 };
 
-let getJohnOrders = () => {
+let getJohnOrders = async () => {
   return new Promise(function (resolve) {
     setTimeout(
       () =>
@@ -32,4 +32,16 @@ let getJohnOrders = () => {
   });
 };
 
-// Start coding here
+//จากโจทย์ Exercise #3 ให้เรียงลำดับการทำงานของ Asynchronous Operation จาก Function ในโจทย์ข้างต้น ด้วยวิธี Async / Await
+// กำหนดให้ลำดับการทำงานต้องเป็นดังนี้
+
+// getJohnProfile จะต้องถูก Execute ก่อน
+// ให้ Log ตัวข้อมูลที่ได้จาก Function getJohnProfile
+// getJohnOrders จะต้องถูก Execute ถัดมา
+// ให้ Log ตัวข้อมูลที่ได้จาก Function getJohnOrders
+
+const profile = await getJohnProfile();
+console.log(profile);
+
+const order = await getJohnOrders();
+console.log(order);

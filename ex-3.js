@@ -32,4 +32,19 @@ let getJohnOrders = () => {
   });
 };
 
-// Start coding here
+// // เขียนโค้ดเพื่อเรียงลำดับการทำงานด้วยวิธี Promise Property ปกติ
+// กำหนดให้ลำดับการทำงานต้องเป็นดังนี้
+// getJohnProfile จะต้องถูก Execute ก่อน
+// ให้แสดงผลตัวข้อมูลที่ได้จาก Function getJohnProfile ด้วย console.log()
+// getJohnOrders จะต้องถูก Execute ถัดมา
+// ให้แสดงผลตัวข้อมูลที่ได้จาก Function getJohnOrders ด้วย console.log()
+const profile = (data) => {
+  console.log(data);
+};
+
+const order = (data) => {
+  console.log(data);
+};
+
+getJohnProfile().then(profile);
+getJohnOrders().then(order);
